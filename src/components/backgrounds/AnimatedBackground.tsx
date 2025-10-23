@@ -11,14 +11,14 @@ interface AnimatedBackgroundProps {
 
 const AnimatedBackground = ({
   showNeuralNetwork = true,
-  showMatrixRain = true,
-  showTronGrid = true,
+  showMatrixRain = false,
+  showTronGrid = false,
   intensity = 1
 }: AnimatedBackgroundProps) => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {showTronGrid && <TronGrid opacity={0.2 * intensity} />}
-      {showMatrixRain && <MatrixRain density={30 / intensity} />}
+      {showTronGrid && <TronGrid opacity={0.1 * intensity} />}
+      {showMatrixRain && <MatrixRain density={40 / intensity} />}
       {showNeuralNetwork && <NeuralNetwork intensity={intensity} />}
     </div>
   );
