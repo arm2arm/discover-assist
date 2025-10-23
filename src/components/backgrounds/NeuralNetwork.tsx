@@ -43,8 +43,8 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.6,
-      vy: (Math.random() - 0.5) * 0.6,
+      vx: (Math.random() - 0.5) * 1.5,
+      vy: (Math.random() - 0.5) * 1.5,
       radius: Math.random() * 3 + 2,
       color: colors[Math.floor(Math.random() * colors.length)],
       glowIntensity: Math.random() * 0.5 + 0.5,
