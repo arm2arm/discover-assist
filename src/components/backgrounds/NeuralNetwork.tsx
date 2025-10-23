@@ -84,29 +84,35 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
           particle.vy += dy * 0.00003;
         }
 
-        // Update pulse phase
+        // Update pulse phase with varied speeds for organic feel
         particle.pulsePhase = time + i * 0.1;
-        const pulse = Math.sin(particle.pulsePhase) * 0.5 + 0.5;
+        const pulse = Math.sin(particle.pulsePhase * 2) * 0.5 + 0.5;
+        const slowPulse = Math.sin(time * 0.5 + i * 0.2) * 0.5 + 0.5;
+        
+        // Animated radius
+        const animatedRadius = particle.radius * (1 + slowPulse * 0.5);
+        const glowRadius = animatedRadius * (4 + pulse * 2);
 
-        // Draw node glow
+        // Draw node glow with enhanced animation
         const gradient = ctx.createRadialGradient(
           particle.x, particle.y, 0,
-          particle.x, particle.y, particle.radius * 4
+          particle.x, particle.y, glowRadius
         );
-        gradient.addColorStop(0, particle.color.replace(')', `, ${0.8 * pulse})`).replace('hsl', 'hsla'));
-        gradient.addColorStop(0.5, particle.color.replace(')', `, ${0.3 * pulse})`).replace('hsl', 'hsla'));
+        gradient.addColorStop(0, particle.color.replace(')', `, ${0.9 * pulse})`).replace('hsl', 'hsla'));
+        gradient.addColorStop(0.3, particle.color.replace(')', `, ${0.5 * pulse})`).replace('hsl', 'hsla'));
+        gradient.addColorStop(0.7, particle.color.replace(')', `, ${0.2 * pulse})`).replace('hsl', 'hsla'));
         gradient.addColorStop(1, 'rgba(77, 208, 225, 0)');
         
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.radius * 4, 0, Math.PI * 2);
+        ctx.arc(particle.x, particle.y, glowRadius, 0, Math.PI * 2);
         ctx.fillStyle = gradient;
         ctx.fill();
 
-        // Draw node core
+        // Draw node core with animated size
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+        ctx.arc(particle.x, particle.y, animatedRadius, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
-        ctx.shadowBlur = 10 * pulse;
+        ctx.shadowBlur = 15 * pulse + 5;
         ctx.shadowColor = particle.color;
         ctx.fill();
         ctx.shadowBlur = 0;
