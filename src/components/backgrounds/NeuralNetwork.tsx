@@ -43,8 +43,8 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
+      vx: (Math.random() - 0.5) * 0.6,
+      vy: (Math.random() - 0.5) * 0.6,
       radius: Math.random() * 3 + 2,
       color: colors[Math.floor(Math.random() * colors.length)],
       glowIntensity: Math.random() * 0.5 + 0.5,
@@ -69,9 +69,11 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Bounce off edges
-        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+        // Periodic boundary conditions (wrap around)
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
 
         // Mouse attraction
         const dx = mouseRef.current.x - particle.x;
