@@ -10,16 +10,17 @@ const Mission = () => {
           </div>
           
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-foreground">
-            Our Mission
+            Our Mission to Assist Researchers
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground leading-relaxed text-center mb-8">
-              Physics-LLM develops autonomous AI agents powered by domain-specific Large Language Models 
-              to advance reproducible, efficient, and discoverable physics research. Our agentic systems 
-              assist researchers across the fundamental sciences by combining persistent goal-directed 
-              reasoning with physics-grounded knowledge bases, enabling trustworthy collaboration between 
-              human expertise and artificial intelligence.
+              Physics-LLM empowers researchers with autonomous AI agents that accelerate automated 
+              scientific discoveries. By combining domain-specific Large Language Models with 
+              physics-grounded knowledge bases, our agentic systems work alongside researchers to 
+              automate hypothesis generation, experiment design, and data analysis—transforming the 
+              pace of discovery across fundamental sciences while maintaining reproducibility and 
+              scientific rigor.
             </p>
             
             <div className="bg-card-gradient rounded-2xl p-8 border border-border shadow-card">
