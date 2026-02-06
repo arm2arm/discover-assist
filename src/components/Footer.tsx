@@ -1,3 +1,5 @@
+import bmbfLogo from "@/assets/bmbf-logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12">
@@ -30,6 +32,25 @@ const Footer = () => {
                 <li>• Energy Efficiency</li>
                 <li>• Open Collaboration</li>
               </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-primary-foreground/20 pt-8 mb-8">
+            <p className="text-center text-primary-foreground/60 text-sm mb-6">Funded by</p>
+            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+              <a href="https://erumdatahub.de/en/" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <div className="bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
+                  <span className="text-primary-foreground font-semibold text-sm">ErUM-Data-Hub</span>
+                </div>
+              </a>
+              <a href="https://www.bmbf.de" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <img src={bmbfLogo} alt="BMBF - Bundesministerium für Bildung und Forschung" className="h-16 w-auto object-contain" />
+              </a>
+              <a href="https://www.aip.de" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <div className="bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
+                  <span className="text-primary-foreground font-semibold text-sm">AIP – Leibniz-Institut für Astrophysik Potsdam</span>
+                </div>
+              </a>
             </div>
           </div>
           
