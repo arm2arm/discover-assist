@@ -1,4 +1,6 @@
 import bmbfLogo from "@/assets/bmbf-logo.png";
+import aipLogo from "@/assets/aip-logo.jpg";
+import erumLogo from "@/assets/erum-data-hub-logo.png";
 
 const Footer = () => {
   return (
@@ -39,17 +41,13 @@ const Footer = () => {
             <p className="text-center text-primary-foreground/60 text-sm mb-6">Funded by</p>
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
               <a href="https://erumdatahub.de/en/" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                <div className="bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
-                  <span className="text-primary-foreground font-semibold text-sm">ErUM-Data-Hub</span>
-                </div>
+                <img src={erumLogo} alt="ErUM-Data-Hub" className="h-14 w-auto object-contain" />
               </a>
               <a href="https://www.bmbf.de" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                <img src={bmbfLogo} alt="BMBF - Bundesministerium für Bildung und Forschung" className="h-16 w-auto object-contain" />
+                <img src={bmbfLogo} alt="BMFTR - Bundesministerium für Forschung, Technologie und Raumfahrt" className="h-14 w-auto object-contain" />
               </a>
               <a href="https://www.aip.de" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                <div className="bg-white/10 rounded-lg px-4 py-3 flex items-center gap-2">
-                  <span className="text-primary-foreground font-semibold text-sm">AIP – Leibniz-Institut für Astrophysik Potsdam</span>
-                </div>
+                <img src={aipLogo} alt="AIP - Leibniz-Institut für Astrophysik Potsdam" className="h-14 w-auto object-contain" />
               </a>
             </div>
           </div>
