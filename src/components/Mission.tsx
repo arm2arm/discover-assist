@@ -8,29 +8,30 @@ const Mission = () => {
           <div className="flex items-center justify-center mb-8">
             <Target className="h-12 w-12 text-accent" />
           </div>
-          
+
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-foreground">
-            Our Mission to Assist Researchers
+            From Big Data to Smart Data
           </h2>
-          
+
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground leading-relaxed text-center mb-8">
-              Physics-LLM empowers researchers with autonomous AI agents that accelerate automated 
-              scientific discoveries. By combining domain-specific Large Language Models with 
-              physics-grounded knowledge bases, our agentic systems work alongside researchers to 
-              automate hypothesis generation, experiment design, and data analysis—transforming the 
-              pace of discovery across fundamental sciences while maintaining reproducibility and 
-              scientific rigor.
+              PhysicsLLM empowers researchers across all ErUM communities with autonomous AI
+              agents that accelerate scientific discovery. By combining domain-specific Large
+              Language Models with physics-grounded knowledge bases, our agentic systems automate
+              data curation, metadata annotation, semantic search, and workflow documentation—transforming
+              how ~20,000 scientists manage and publish research data.
             </p>
-            
+
             <div className="bg-card-gradient rounded-2xl p-8 border border-border shadow-card">
               <div className="flex items-start gap-4">
                 <Sparkles className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                 <p className="text-lg text-card-foreground">
-                  We are committed to building AI assistants that embody{" "}
+                  Built on{" "}
                   <strong className="text-accent">FAIR principles</strong>{" "}
-                  (Findable, Accessible, Interoperable, Reusable) and support the entire research 
-                  lifecycle—from hypothesis conception through reproducible execution and transparent documentation.
+                  (Findable, Accessible, Interoperable, Reusable) and integrated with{" "}
+                  <strong className="text-accent">REANA</strong> for reproducible workflow
+                  orchestration. Our tools prioritize energy-conscious and computationally
+                  efficient code generation across the entire research lifecycle.
                 </p>
               </div>
             </div>
