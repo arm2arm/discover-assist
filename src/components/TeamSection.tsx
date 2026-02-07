@@ -6,7 +6,7 @@ const team = [
     name: "Dr. Arman Khalatyan",
     role: "WP Lead · Agentic Systems Architecture",
     institution: "Leibniz Institute for Astrophysics Potsdam (AIP)",
-    orcid: "https://orcid.org/0000-0000-0000-0000",
+    orcid: "https://orcid.org/0000-0002-8913-0690",
     isPi: true,
   },
   {
