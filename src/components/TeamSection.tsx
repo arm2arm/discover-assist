@@ -3,7 +3,7 @@ import { User, ExternalLink } from "lucide-react";
 
 const team = [
   {
-    name: "Dr. Areg Khalatyan",
+    name: "Dr. Arman Khalatyan",
     role: "WP Lead · Agentic Systems Architecture",
     institution: "Leibniz Institute for Astrophysics Potsdam (AIP)",
     orcid: "https://orcid.org/0000-0000-0000-0000",
