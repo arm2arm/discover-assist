@@ -10,7 +10,7 @@ const team = [
     isPi: true,
   },
   {
-    name: "Dr. Tom Thong",
+    name: "Dr. Tom Tong",
     role: "Implementation · Multi-GPU Optimization · CrewAI Development",
     institution: "Leibniz Institute for Astrophysics Potsdam (AIP)",
     orcid: "https://orcid.org/0000-0000-0000-0001",
