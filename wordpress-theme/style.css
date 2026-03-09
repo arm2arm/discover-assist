@@ -1,0 +1,23 @@
+/*
+Theme Name: PhysicsLLM Agentic Workflows
+Theme URI: https://physics-llm.erumdatahub.de/
+Author: PhysicsLLM Team
+Author URI: https://physics-llm.erumdatahub.de/
+Description: Landing page for PhysicsLLM Agentic Workflows work package — AI-powered research automation for fundamental physics.
+Version: 1.0.0
+License: MIT
+Text Domain: physicsllm
+*/
+
+/*
+  NOTE: This file contains the WordPress theme header above.
+  
+  You must compile Tailwind CSS separately and either:
+  1. Paste the compiled output below this comment, OR
+  2. Enqueue a separate compiled CSS file in functions.php
+
+  To compile, run from the React project root:
+    npx tailwindcss -i src/index.css -o wordpress-theme/assets/css/tailwind.css --minify
+
+  The theme enqueues tailwind.css from assets/css/ via functions.php.
+*/

@@ -1,85 +1,115 @@
 
 
-# Manual Conversion: React Site → WordPress Theme
+# PhysicsLLM Full Landing Page Transformation
 
-This is a guide for converting your PhysicsLLM React application into a WordPress theme outside of Lovable. Since WordPress requires PHP and a server environment, this work must be done in a local WordPress development setup.
+## Overview
+Transform the current "Coming Soon" single-section page into a comprehensive, multi-section research work package landing page based on verified content from physics-llm.erumdatahub.de and the Lamarr Institute news article.
 
-## Prerequisites
+## Key Facts Distilled from Sources
+- **Funding**: ~2.8M EUR over 3 years, funded by BMFTR via ErUM-Data initiative
+- **Coordinator**: Dr. Tim Ruhe (Lamarr Institute) -- project-wide coordinator
+- **PI (Agentic WP)**: Dr. A. Khalatyan (AIP)
+- **Infrastructure**: Supported by PUNCH4NFDI
+- **Consortium**: Scientists from all ErUM communities + computer science + industry
+- **Core mission**: LLM-enhanced RDM toolkit turning Big Data into Smart Data
+- **Key tech**: LLM agents, CrewAI, metadata annotation, semantic search, workflow documentation
 
-- A local WordPress installation (e.g., via Local by Flywheel, XAMPP, or Docker)
-- Basic familiarity with PHP and WordPress template hierarchy
-- Export your code from Lovable via GitHub integration
+---
 
-## Step-by-Step Conversion Plan
+## Page Structure (top to bottom)
 
-### 1. Create the WordPress Theme Scaffold
+### 1. Navigation Bar (new component: `Navbar.tsx`)
+- Sticky top nav with "PhysicsLLM" brand linking to https://physics-llm.erumdatahub.de/
+- Menu items: Overview, Team, Outputs, Resources, Contact (smooth scroll anchors)
+- CTA button: "Join Collaboration"
+- Mobile hamburger menu
 
-Create a folder in `wp-content/themes/physicsllm/` with these required files:
+### 2. Hero Section (update existing `Hero.tsx`)
+- Keep animated background and floating badges
+- Change heading to "Agentic Workflows Work Package"
+- Add subheading: "Building autonomous AI systems for physics research automation"
+- Add description paragraph about LLM-based agentic frameworks
+- Replace "Coming Soon" with two CTA buttons: "Explore Our Tools" (primary) + "Read Documentation" (outlined)
 
-- `style.css` — Theme metadata header + all your Tailwind-compiled CSS
-- `functions.php` — Enqueue styles/scripts, register menus
-- `index.php` — Main template
-- `header.php` — Navbar markup (from `Navbar.tsx`)
-- `footer.php` — Footer markup (from `Footer.tsx`)
-- `front-page.php` — Homepage template with all sections
+### 3. TL;DR Overview Cards (new component: `TLDRPanel.tsx`)
+- 2x2 grid of scannable cards:
+  - Objective, Focus Areas, Deliverables, Status (Active 2025-2027)
 
-### 2. Compile Tailwind CSS to a Static File
+### 4. Project Context Banner (new component: `ProjectContext.tsx`)
+- "Part of the PhysicsLLM Initiative" heading
+- Text about the broader PhysicsLLM project (from erumdatahub.de content)
+- Funding badges: BMFTR, ErUM-Data-Hub, PUNCH4NFDI
+- Link to main PhysicsLLM site
 
-Run `npx tailwindcss -o style-output.css --minify` against your current source. This produces a single CSS file containing all used utility classes. Include it in `style.css` after the WordPress theme header comment block.
+### 5. Mission Section (update existing `Mission.tsx`)
+- Integrate actual content from sources about Big Data to Smart Data transformation
+- Keep FAIR principles callout
 
-### 3. Convert Each React Component to PHP Partials
+### 6. Agentic Capabilities (keep existing `AgenticCapabilities.tsx`)
+- Minor content refinements to align with source material
 
-Each component becomes a PHP template part in a `template-parts/` folder:
+### 7. Use Cases Section (new component: `UseCases.tsx`)
+- Three feature cards: Autonomous Literature Review, FAIR Data Pipeline Orchestration, Research Workflow Automation
 
-| React Component | WordPress File |
-|---|---|
-| `Hero.tsx` | `template-parts/hero.php` |
-| `TLDRPanel.tsx` | `template-parts/tldr.php` |
-| `ProjectContext.tsx` | `template-parts/project-context.php` |
-| `Mission.tsx` | `template-parts/mission.php` |
-| `AgenticCapabilities.tsx` | `template-parts/capabilities.php` |
-| `UseCases.tsx` | `template-parts/use-cases.php` |
-| `Objectives.tsx` | `template-parts/objectives.php` |
-| `KeyFeatures.tsx` | `template-parts/key-features.php` |
-| `DomainKnowledge.tsx` | `template-parts/domain-knowledge.php` |
-| `TeamSection.tsx` | `template-parts/team.php` |
-| `OutputsSection.tsx` | `template-parts/outputs.php` |
-| `InfrastructureEcosystem.tsx` | `template-parts/infrastructure.php` |
-| `CallToAction.tsx` | `template-parts/call-to-action.php` |
+### 8. Core Objectives (keep existing `Objectives.tsx`)
+- Minor wording updates
 
-**Conversion approach for each:** Take the JSX output, convert it to plain HTML (replace `className` → `class`, remove JS logic, inline the static data), and wrap in PHP.
+### 9. Key Features (keep existing `KeyFeatures.tsx`)
+- No major changes needed
 
-### 4. Build `front-page.php`
+### 10. Domain Knowledge (keep existing `DomainKnowledge.tsx`)
+- No major changes needed
 
-```php
-<?php get_header(); ?>
-<?php get_template_part('template-parts/hero'); ?>
-<?php get_template_part('template-parts/tldr'); ?>
-<?php get_template_part('template-parts/project-context'); ?>
-<!-- ... all other sections ... -->
-<?php get_template_part('template-parts/call-to-action'); ?>
-<?php get_footer(); ?>
-```
+### 11. Team Section (new component: `TeamSection.tsx`)
+- Profile cards for Dr. Areg Khalatyan (PI, AIP) and Tom Thong (AIP)
+- ORCID placeholders, roles, institution info
 
-### 5. Handle Interactive Elements
+### 12. Outputs Section (new component: `OutputsSection.tsx`)
+- Three columns: Publications/Preprints, Code/Tools, Documentation/Guides
+- Placeholder items marked as "coming soon"
 
-- **Smooth scroll navigation** — Convert to vanilla JS in an enqueued script file
-- **Mobile menu toggle** — Rewrite with vanilla JS (add/remove a CSS class)
-- **Animated backgrounds** (NeuralNetwork, MatrixRain, TronGrid) — These use canvas/CSS animations. Copy the animation CSS from `index.css` and convert any canvas logic to a standalone JS file
+### 13. Research Infrastructure Ecosystem (new component: `InfrastructureEcosystem.tsx`)
+- ErUM-Data context paragraph (from Lamarr article: ~20,000 scientists, PUNCH4NFDI integration)
+- Logo strip: ErUM-Data-Hub, PUNCH4NFDI, BMFTR, AIP
+- Three info columns: ErUM Communities, PUNCH4NFDI, Infrastructure
 
-### 6. Assets
+### 14. Call to Action (keep existing `CallToAction.tsx`)
+- Minor content updates
 
-- Copy `src/assets/*.png`, `*.jpg` into the theme's `assets/` folder
-- Update image paths in PHP partials to use `<?php echo get_template_directory_uri(); ?>/assets/...`
-- Copy `favicon.ico` and handle via `functions.php`
+### 15. Footer (update existing `Footer.tsx`)
+- Left: project info + funding period
+- Center: navigation links
+- Right: PUNCH4NFDI badge
+- Keep existing funding logos (ErUM, BMFTR, AIP)
 
-### 7. What You Lose
+### 16. Index Page (`pages/Index.tsx`)
+- Import and render all sections in order
 
-- Hot reload and live preview (standard for WP development)
-- React state management (replaced by vanilla JS)
-- Vite bundling (replaced by WordPress enqueue system)
+---
 
-### Summary
+## Technical Details
 
-The core work is mechanical: extract the HTML structure from each React component's JSX, convert to PHP template parts, compile Tailwind to a static CSS file, and rewrite the small amount of interactivity (mobile menu, smooth scroll) in vanilla JavaScript.
+### New Files to Create
+- `src/components/Navbar.tsx` -- sticky navigation with smooth scroll + mobile menu
+- `src/components/TLDRPanel.tsx` -- 2x2 overview cards
+- `src/components/ProjectContext.tsx` -- PhysicsLLM initiative banner with funding badges
+- `src/components/UseCases.tsx` -- three use-case feature cards
+- `src/components/TeamSection.tsx` -- team profile cards
+- `src/components/OutputsSection.tsx` -- three-column resources grid
+- `src/components/InfrastructureEcosystem.tsx` -- ErUM/PUNCH4NFDI context block
+
+### Files to Modify
+- `src/pages/Index.tsx` -- add all new and existing sections
+- `src/components/Hero.tsx` -- update content, remove "Coming Soon", add CTAs
+- `src/components/Mission.tsx` -- update text with source content
+- `src/components/Footer.tsx` -- restructure with nav links and PUNCH4NFDI badge
+- `src/components/CallToAction.tsx` -- minor content updates
+
+### Design Approach
+- Keep existing dark teal-to-blue color palette and animated background
+- Reuse existing Card, Button UI components throughout
+- Smooth scroll navigation using anchor IDs
+- Hover lift effects on all cards (already established pattern)
+- All sections responsive with existing Tailwind breakpoints
+- Alternating section backgrounds (`bg-background` / `bg-muted/30`) for visual rhythm
 
