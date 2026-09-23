@@ -31,6 +31,7 @@ const Index = () => {
       <KeyFeatures />
       <DomainKnowledge />
       <TeamSection />
+      <Consortium />
       <OutputsSection />
       <InfrastructureEcosystem />
       <div id="contact">
