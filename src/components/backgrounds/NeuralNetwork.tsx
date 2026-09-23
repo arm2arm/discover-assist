@@ -125,7 +125,7 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
-            const connectionPulse = Math.sin(time * 2 + distance * 0.01) * 0.5 + 0.5;
+            const connectionPulse = Math.sin(time * 0.8 + distance * 0.01) * 0.5 + 0.5;
             const opacity = (0.4 * (1 - distance / 150)) * connectionPulse;
             
             ctx.beginPath();
