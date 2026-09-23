@@ -61,7 +61,7 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
     let time = 0;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.01;
+      time += 0.004;
 
       // Update and draw particles
       particlesRef.current.forEach((particle, i) => {
