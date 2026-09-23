@@ -7,9 +7,6 @@ import DataChallenge from "@/components/DataChallenge";
 import Consortium from "@/components/Consortium";
 import AgenticCapabilities from "@/components/AgenticCapabilities";
 import UseCases from "@/components/UseCases";
-import Objectives from "@/components/Objectives";
-import KeyFeatures from "@/components/KeyFeatures";
-import DomainKnowledge from "@/components/DomainKnowledge";
 import TeamSection from "@/components/TeamSection";
 import OutputsSection from "@/components/OutputsSection";
 import InfrastructureEcosystem from "@/components/InfrastructureEcosystem";
@@ -30,9 +27,6 @@ const Index = () => {
       <DataChallenge />
       <AgenticCapabilities />
       <UseCases />
-      <Objectives />
-      <KeyFeatures />
-      <DomainKnowledge />
       <ResultsSection />
       <NewsFeed />
       <ActivityChannels />
