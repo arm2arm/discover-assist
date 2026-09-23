@@ -43,8 +43,8 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 1.5,
-      vy: (Math.random() - 0.5) * 1.5,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
       radius: Math.random() * 3 + 2,
       color: colors[Math.floor(Math.random() * colors.length)],
       glowIntensity: Math.random() * 0.5 + 0.5,
@@ -61,7 +61,7 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
     let time = 0;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      time += 0.01;
+      time += 0.004;
 
       // Update and draw particles
       particlesRef.current.forEach((particle, i) => {
@@ -80,8 +80,8 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
         const dy = mouseRef.current.y - particle.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 200) {
-          particle.vx += dx * 0.00003;
-          particle.vy += dy * 0.00003;
+          particle.vx += dx * 0.00001;
+          particle.vy += dy * 0.00001;
         }
 
         // Update pulse phase with varied speeds for organic feel
@@ -125,7 +125,7 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
-            const connectionPulse = Math.sin(time * 2 + distance * 0.01) * 0.5 + 0.5;
+            const connectionPulse = Math.sin(time * 0.8 + distance * 0.01) * 0.5 + 0.5;
             const opacity = (0.4 * (1 - distance / 150)) * connectionPulse;
             
             ctx.beginPath();
