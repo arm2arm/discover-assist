@@ -24,6 +24,7 @@ const Index = () => {
       <TLDRPanel />
       <ProjectContext />
       <Mission />
+      <DataChallenge />
       <AgenticCapabilities />
       <UseCases />
       <Objectives />
