@@ -10,7 +10,7 @@
     --card-foreground: 211 68% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 211 68% 15%;
-    --primary: 211 68% 15%;
+    --primary: 202 52% 28%;
     --primary-foreground: 210 40% 98%;
     --secondary: 196 33% 91%;
     --secondary-foreground: 211 68% 15%;
@@ -26,30 +26,30 @@
     --radius: 0.35rem;
     --gradient-start: 178 42% 55%;
     --gradient-middle: 189 56% 40%;
-    --gradient-end: 211 68% 15%;
-    --hero-gradient: linear-gradient(135deg, hsl(178 42% 55%) 0%, hsl(189 56% 40%) 42%, hsl(211 68% 15%) 100%);
-    --card-gradient: linear-gradient(135deg, hsl(204 62% 27% / 0.3), hsl(211 68% 15% / 0.2));
+    --gradient-end: 202 52% 28%;
+    --hero-gradient: linear-gradient(135deg, hsl(178 42% 55%) 0%, hsl(189 56% 40%) 42%, hsl(202 52% 28%) 100%);
+    --card-gradient: linear-gradient(135deg, hsl(196 44% 38% / 0.28), hsl(202 52% 28% / 0.18));
     --shadow-glow: 0 12px 45px hsl(178 42% 55% / 0.16);
     --shadow-card: 0 12px 35px hsl(211 68% 8% / 0.35);
   }
 
   .dark {
-    --background: 211 68% 15%;
+    --background: 204 42% 23%;
     --foreground: 210 40% 98%;
-    --card: 204 62% 20%;
+    --card: 201 40% 28%;
     --card-foreground: 210 40% 98%;
-    --popover: 204 62% 20%;
+    --popover: 201 40% 28%;
     --popover-foreground: 210 40% 98%;
-    --primary: 211 68% 15%;
+    --primary: 202 52% 28%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 204 62% 27%;
+    --secondary: 198 38% 34%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 205 46% 19%;
+    --muted: 202 34% 27%;
     --muted-foreground: 205 22% 72%;
     --accent: 178 42% 55%;
     --accent-foreground: 211 68% 15%;
-    --border: 204 45% 30%;
-    --input: 204 45% 30%;
+    --border: 198 33% 40%;
+    --input: 198 33% 40%;
     --ring: 178 42% 55%;
   }
 
@@ -61,8 +61,8 @@
 
 @layer utilities {
   .hero-media-overlay { background: linear-gradient(to top, hsl(var(--primary) / 0.92), transparent 65%); }
-  .hero-full-overlay { background: linear-gradient(90deg, hsl(var(--primary) / 0.76), hsl(var(--primary) / 0.28), hsl(var(--primary) / 0.55)); }
-  .hero-copy-surface { background: hsl(var(--primary) / 0.48); backdrop-filter: blur(3px); }
+  .hero-full-overlay { background: linear-gradient(90deg, hsl(var(--primary) / 0.58), hsl(var(--primary) / 0.16), hsl(var(--primary) / 0.36)); }
+  .hero-copy-surface { background: hsl(var(--primary) / 0.34); backdrop-filter: blur(3px); }
   .hero-video-placeholder { background: hsl(var(--primary-foreground) / 0.06); backdrop-filter: blur(2px); }
   .activity-grid {
     background-image: linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
