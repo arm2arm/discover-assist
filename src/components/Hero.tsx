@@ -1,94 +1,42 @@
+import { useState } from "react";
+import { Play, X } from "lucide-react";
 import AnimatedBackground from "./backgrounds/AnimatedBackground";
 import { Button } from "@/components/ui/button";
-import { Brain, Zap, Network, Sparkles, ArrowRight, FileText } from "lucide-react";
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-hero-gradient overflow-hidden">
-      <AnimatedBackground intensity={1.5} />
-
-      {/* Floating AI badges */}
-      <div className="absolute inset-0 pointer-events-none z-10">
-        <div className="absolute top-20 left-10 animate-[float_6s_ease-in-out_infinite]">
-          <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-full px-6 py-3 flex items-center gap-2 shadow-glow">
-            <Brain className="w-5 h-5 text-white animate-pulse" />
-            <span className="text-white font-semibold text-sm">AI Agents</span>
+    <section id="overview" className="bg-primary text-primary-foreground py-14 md:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="lg:col-span-5">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-5">Agentic Workflows · PhysicsLLM</p>
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">AI research assistants for reproducible physics</h1>
+          <p className="text-lg leading-relaxed text-primary-foreground/75 mt-6">We develop language-model agents that help researchers connect data, software, and scientific context—while keeping every step visible and reproducible.</p>
+          <div className="mt-8 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-widest text-primary-foreground/70">
+            <span className="border border-primary-foreground/20 px-3 py-2">AI agents</span><span className="border border-primary-foreground/20 px-3 py-2">Open science</span><span className="border border-primary-foreground/20 px-3 py-2">Human oversight</span>
           </div>
         </div>
-        <div className="absolute top-32 right-16 animate-[float_7s_ease-in-out_infinite_1s]">
-          <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-full px-6 py-3 flex items-center gap-2 shadow-glow">
-            <Network className="w-5 h-5 text-white animate-pulse" />
-            <span className="text-white font-semibold text-sm">Neural Networks</span>
+        <button onClick={() => setOpen(true)} className="lg:col-span-7 group relative aspect-video overflow-hidden border border-primary-foreground/20 bg-primary-foreground/5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Play PhysicsLLM project overview">
+          <AnimatedBackground intensity={0.8} />
+          <div className="absolute inset-0 hero-media-overlay" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="h-16 w-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center group-hover:scale-110 transition-transform"><Play className="h-6 w-6 ml-1" fill="currentColor" /></span>
           </div>
-        </div>
-        <div className="absolute bottom-32 left-20 animate-[float_8s_ease-in-out_infinite_2s]">
-          <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-full px-6 py-3 flex items-center gap-2 shadow-glow">
-            <Zap className="w-5 h-5 text-white animate-pulse" />
-            <span className="text-white font-semibold text-sm">LLM Powered</span>
+          <div className="absolute bottom-5 left-5 right-5">
+            <p className="font-heading font-semibold text-primary-foreground">Watch the project overview</p>
+            <p className="text-xs text-primary-foreground/65 mt-1">A visual introduction to agents, data, and reproducible discovery</p>
           </div>
-        </div>
-        <div className="absolute bottom-24 right-24 animate-[float_6.5s_ease-in-out_infinite_1.5s]">
-          <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-full px-6 py-3 flex items-center gap-2 shadow-glow">
-            <Sparkles className="w-5 h-5 text-white animate-pulse" />
-            <span className="text-white font-semibold text-sm">ML Research</span>
-          </div>
-        </div>
+        </button>
       </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-5xl mx-auto text-center space-y-8 animate-[fade-in_1s_ease-out,scale-in_0.8s_ease-out]">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md border-2 border-white/40 rounded-full px-8 py-4 shadow-glow animate-pulse">
-            <div className="relative">
-              <Brain className="w-8 h-8 text-white animate-[spin_8s_linear_infinite]" />
-              <div className="absolute inset-0 bg-white/30 rounded-full animate-ping" />
-            </div>
-            <span className="text-white font-bold text-lg tracking-wider">
-              AGENTIC AI · POWERED BY LLM
-            </span>
-          </div>
-
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="inline-block bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent animate-[shimmer_3s_ease-in-out_infinite] bg-[length:200%_auto]">
-              Agentic Workflows
-            </span>
-            <br />
-            <span className="text-white/95 text-3xl sm:text-4xl lg:text-5xl mt-2 inline-block">
-              Building Autonomous AI Systems for
-            </span>
-            <br />
-            <span className="inline-block mt-2 bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent animate-[shimmer_3s_ease-in-out_infinite_1s] bg-[length:200%_auto]">
-              Physics Research Automation
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
-            Developing LLM-based agentic frameworks that orchestrate complex research
-            workflows—from data analysis to publication-ready results. Leveraging large language
-            models and agentic AI to transform Big Data into Smart Data.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-glow group"
-              onClick={() => document.querySelector("#outputs")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              Explore Our Tools
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm"
-              onClick={() => document.querySelector("#resources")?.scrollIntoView({ behavior: "smooth" })}
-            >
-              <FileText className="mr-2 h-5 w-5" />
-              Read Documentation
-            </Button>
+      {open && <div className="fixed inset-0 z-[100] bg-primary/95 p-4 flex items-center justify-center" role="dialog" aria-modal="true" aria-label="PhysicsLLM project overview">
+        <div className="relative w-full max-w-4xl aspect-video bg-primary border border-primary-foreground/20 overflow-hidden">
+          <AnimatedBackground intensity={1} />
+          <Button variant="ghost" size="icon" className="absolute right-3 top-3 z-20 text-primary-foreground hover:bg-primary-foreground/10" onClick={() => setOpen(false)} aria-label="Close overview"><X /></Button>
+          <div className="absolute inset-0 flex items-center justify-center p-8 text-center z-10">
+            <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-widest text-accent">PhysicsLLM in one minute</p><h2 className="font-heading text-3xl md:text-5xl font-bold mt-4">Researchers stay in control. AI helps connect the work.</h2><p className="text-primary-foreground/75 leading-relaxed mt-5">Our assistants bring together domain knowledge, tools, data, and provenance so complex workflows become easier to build, inspect, and reproduce.</p></div>
           </div>
         </div>
-      </div>
+      </div>}
     </section>
   );
 };

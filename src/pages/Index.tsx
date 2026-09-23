@@ -15,6 +15,9 @@ import OutputsSection from "@/components/OutputsSection";
 import InfrastructureEcosystem from "@/components/InfrastructureEcosystem";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import NewsFeed from "@/components/NewsFeed";
+import ResultsSection from "@/components/ResultsSection";
+import ActivityChannels from "@/components/ActivityChannels";
 
 const Index = () => {
   return (
@@ -30,6 +33,9 @@ const Index = () => {
       <Objectives />
       <KeyFeatures />
       <DomainKnowledge />
+      <ResultsSection />
+      <NewsFeed />
+      <ActivityChannels />
       <TeamSection />
       <Consortium />
       <OutputsSection />
