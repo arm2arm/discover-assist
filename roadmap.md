@@ -5,3 +5,5 @@
 - [x] Add results, workshops, events, papers, outreach, and interviews
 - [x] Add team avatars, partner logo buttons, and coordinator contact
 - [x] Validate desktop, mobile, interactions, and build health
+- [ ] Add the PUNCH4NFDI partner mark
+- [ ] Extend the neural animation across the opening and retain a video placeholder
