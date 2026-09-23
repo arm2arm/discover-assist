@@ -6,9 +6,11 @@ import { Button } from "@/components/ui/button";
 const Hero = () => {
   const [open, setOpen] = useState(false);
   return (
-    <section id="overview" className="bg-primary text-primary-foreground py-14 md:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-        <div className="lg:col-span-5">
+    <section id="overview" className="relative overflow-hidden bg-primary text-primary-foreground py-14 md:py-20">
+      <AnimatedBackground intensity={0.8} />
+      <div className="absolute inset-0 hero-full-overlay" />
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div className="lg:col-span-5 hero-copy-surface p-5 sm:p-7">
           <p className="text-xs font-bold uppercase tracking-widest text-accent mb-5">Agentic Workflows · PhysicsLLM</p>
           <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">AI research assistants for reproducible physics</h1>
           <p className="text-lg leading-relaxed text-primary-foreground/75 mt-6">We develop language-model agents that help researchers connect data, software, and scientific context—while keeping every step visible and reproducible.</p>
@@ -16,15 +18,14 @@ const Hero = () => {
             <span className="border border-primary-foreground/20 px-3 py-2">AI agents</span><span className="border border-primary-foreground/20 px-3 py-2">Open science</span><span className="border border-primary-foreground/20 px-3 py-2">Human oversight</span>
           </div>
         </div>
-        <button onClick={() => setOpen(true)} className="lg:col-span-7 group relative aspect-video overflow-hidden border border-primary-foreground/20 bg-primary-foreground/5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Play PhysicsLLM project overview">
-          <AnimatedBackground intensity={0.8} />
+        <button onClick={() => setOpen(true)} className="lg:col-span-7 group relative aspect-video overflow-hidden border border-primary-foreground/30 hero-video-placeholder text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Open PhysicsLLM video placeholder">
           <div className="absolute inset-0 hero-media-overlay" />
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="h-16 w-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center group-hover:scale-110 transition-transform"><Play className="h-6 w-6 ml-1" fill="currentColor" /></span>
           </div>
           <div className="absolute bottom-5 left-5 right-5">
-            <p className="font-heading font-semibold text-primary-foreground">Watch the project overview</p>
-            <p className="text-xs text-primary-foreground/65 mt-1">A visual introduction to agents, data, and reproducible discovery</p>
+            <p className="font-heading font-semibold text-primary-foreground">Project video</p>
+            <p className="text-xs text-primary-foreground/65 mt-1">Video placeholder · Coming soon</p>
           </div>
         </button>
       </div>
