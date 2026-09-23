@@ -80,8 +80,8 @@ const NeuralNetwork = ({ intensity = 1 }: { intensity?: number }) => {
         const dy = mouseRef.current.y - particle.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 200) {
-          particle.vx += dx * 0.00003;
-          particle.vy += dy * 0.00003;
+          particle.vx += dx * 0.00001;
+          particle.vy += dy * 0.00001;
         }
 
         // Update pulse phase with varied speeds for organic feel
