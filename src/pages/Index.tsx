@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import TLDRPanel from "@/components/TLDRPanel";
 import ProjectContext from "@/components/ProjectContext";
 import Mission from "@/components/Mission";
+import DataChallenge from "@/components/DataChallenge";
+import Consortium from "@/components/Consortium";
 import AgenticCapabilities from "@/components/AgenticCapabilities";
 import UseCases from "@/components/UseCases";
 import Objectives from "@/components/Objectives";
