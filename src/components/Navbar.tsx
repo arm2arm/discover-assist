@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Research", href: "#overview" },
@@ -27,9 +28,13 @@ const Navbar = () => {
         <Link to="/" className="font-heading text-xl font-bold text-foreground hover:text-accent transition-colors">Physics<span className="text-accent">LLM</span></Link>
         <div className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => <button key={item.href} onClick={() => scrollTo(item.href)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{item.label}</button>)}
+          <ThemeToggle />
           <Button size="sm" onClick={() => scrollTo("#contact")}>How to reach us</Button>
         </div>
-        <Button variant="ghost" size="icon" className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">{mobileOpen ? <X /> : <Menu />}</Button>
+        <div className="flex items-center lg:hidden">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">{mobileOpen ? <X /> : <Menu />}</Button>
+        </div>
       </div>
       {mobileOpen && <div className="lg:hidden bg-background border-b border-border px-4 pb-4 space-y-1">{navItems.map((item) => <button key={item.href} onClick={() => scrollTo(item.href)} className="block w-full text-left py-2 text-sm text-muted-foreground hover:text-foreground">{item.label}</button>)}<Button size="sm" className="w-full" onClick={() => scrollTo("#contact")}>How to reach us</Button></div>}
     </nav>
