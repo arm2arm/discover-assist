@@ -7,5 +7,5 @@
 - [x] Validate desktop, mobile, interactions, and build health
 - [x] Add the PUNCH4NFDI partner mark
 - [x] Extend the neural animation across the opening and retain a video placeholder
-- [ ] Apply the PI-approved project text across the homepage
-- [ ] Remove unsupported claims and validate the updated page
+- [x] Apply the PI-approved project text across the homepage
+- [x] Remove unsupported claims and validate the updated page
