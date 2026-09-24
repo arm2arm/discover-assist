@@ -1,36 +1,36 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Lightbulb, FlaskConical, Code, Workflow, BarChart3, BookOpen } from "lucide-react";
+import { BookOpen, BrainCircuit, Code, Bot, Database, Search } from "lucide-react";
 
 const capabilities = [
   {
-    icon: Lightbulb,
-    title: "Assist Researchers in Hypothesis Development",
-    description: "Query domain knowledge bases and synthesize physics literature to identify research gaps and formulate testable hypotheses grounded in established science."
+    icon: BookOpen,
+    title: "Collect Knowledge from New Sources",
+    description: "Bring publications, software repositories, and laboratory notebooks into research data workflows alongside experiments, observatories, and simulations."
   },
   {
-    icon: FlaskConical,
-    title: "Design Reproducible Experiments",
-    description: "Translate high-level physics goals into detailed, reproducible protocols suitable for REANA workflow systems, automating the translation from concept to executable pipeline."
+    icon: BrainCircuit,
+    title: "Train AI Models for Physics",
+    description: "Fine-tune open-source models for physics tasks such as metadata extraction, summarization, and domain-specific question answering."
   },
   {
     icon: Code,
-    title: "Generate Optimized Code",
-    description: "Create production-quality code integrating physics correctness with computational efficiency, energy awareness, and industry best practices."
+    title: "Generate and Optimize Code",
+    description: "Help researchers create code for data analysis and improve its speed and energy efficiency."
   },
   {
-    icon: Workflow,
-    title: "Orchestrate Complex Workflows",
-    description: "Manage multi-stage simulations, data processing, and analysis across distributed resources while maintaining full reproducibility and transparency."
+    icon: Bot,
+    title: "Build Intelligent Research Assistants",
+    description: "Develop agentic AI systems that can plan, reason, and carry out multi-step tasks, suggest next steps, and help write the required code."
   },
   {
-    icon: BarChart3,
-    title: "Analyze Results with Physics Understanding",
-    description: "Interpret experimental outcomes in light of physics principles, identifying surprising phenomena and guiding further investigation beyond statistical analysis."
+    icon: Database,
+    title: "Simplify Data Sharing and Storage",
+    description: "Create a natural-language interface that makes it easier to deposit, classify, retrieve, and share research data."
   },
   {
-    icon: BookOpen,
-    title: "Document and Share Discoveries",
-    description: "Generate publication-ready documentation, structured data repositories, and reproducible analysis packages enabling community verification and reuse."
+    icon: Search,
+    title: "Make Hidden Data Discoverable",
+    description: "Extract information and metadata from publications and other sources to populate searchable databases."
   }
 ];
 
@@ -40,10 +40,10 @@ const AgenticCapabilities = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-foreground">
-            What Our Agentic Assistants Do
+            What the project will build
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            End-to-end support for the complete research lifecycle
+            Six connected areas spanning the research data management process
           </p>
         </div>
 

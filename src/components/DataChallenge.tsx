@@ -4,21 +4,21 @@ import { Scale, Boxes, Bot } from "lucide-react";
 const items = [
   {
     icon: Scale,
-    title: "Data Collection vs. Data Provision",
+    title: "A widening data gap",
     description:
-      "The amount of data recorded and analyzed in physics experiments has grown rapidly over the last decade, and will grow further with the next generation of facilities. The provision of FAIR data is lagging behind — closing this imbalance is what enables the transition from Big Data to Smart Data.",
+      "Physics experiments and simulations generate enormous amounts of data, but much of it is not properly stored, shared, or made accessible for others to reuse.",
   },
   {
     icon: Boxes,
-    title: "An LLM-Enhanced RDM Toolkit",
+    title: "Unequal access to infrastructure",
     description:
-      "Physics-LLM develops a toolkit for research data management covering the collection, reduction and analysis of data, as well as its storing, sharing and finding — fostering swift data publication alongside robust metadata and machine-readable standards.",
+      "Smaller experiments and research facilities often lack the technical infrastructure and staff needed to manage their data effectively.",
   },
   {
     icon: Bot,
-    title: "Large Language Models and Agentic AI",
+    title: "Costly repetition",
     description:
-      "Leveraging LLMs and agentic AI increases the effectiveness of research workflows and the efficiency of data usage. Including non-classical sources such as software repositories and laboratory notebooks lets the toolkit extract knowledge that would be hard to obtain otherwise.",
+      "When results remain difficult to find, valuable knowledge stays locked away and researchers spend time and resources repeating work that has already been done.",
   },
 ];
 
@@ -31,9 +31,8 @@ const DataChallenge = () => {
             The Challenge We Address
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Physics-LLM tackles pressing challenges in research data management with a dedicated
-            LLM-enhanced RDM toolkit for the seamless publication, curation and findability of
-            scientific data.
+             Scientists are highly effective at collecting and analyzing data. The challenge is
+             closing the gap between the data we collect and the data we share and reuse.
           </p>
         </div>
 

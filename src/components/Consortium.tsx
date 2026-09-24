@@ -62,8 +62,10 @@ const Consortium = () => {
             The Physics-LLM Consortium
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            The consortium unites scientists from all ErUM communities together with researchers
-            from computer science and industry. Its infrastructure is supported by PUNCH4NFDI.
+            Coordinated by Technische Universität Dortmund, the project includes partners from
+            DESY, Forschungszentrum Jülich, FAU Erlangen-Nürnberg, Technical University of Munich,
+            Helmholtz-Zentrum Hereon, Leibniz Institute for Astrophysics Potsdam, the University
+            of Bonn, and industry partner Erium GmbH.
           </p>
         </div>
 

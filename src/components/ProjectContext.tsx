@@ -13,10 +13,9 @@ const ProjectContext = () => {
             Part of the PhysicsLLM Initiative
           </h2>
           <p className="text-lg text-white/90 leading-relaxed">
-            PhysicsLLM develops LLM-enhanced toolkits for research data management across all ErUM
-            physics communities—from particle and nuclear physics to astronomy. Our work addresses
-            the challenge of transforming Big Data into Smart Data through AI-powered curation,
-            publication, and discovery tools.
+            Physics-LLM unites physicists, computer scientists, and industry partners to make
+            research data management more efficient. The project develops open-source AI tools
+            that help researchers organize, store, find, share, and reuse scientific data.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-8">
