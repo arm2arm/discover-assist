@@ -11,11 +11,11 @@ const Hero = () => {
       <div className="absolute inset-0 hero-full-overlay" />
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
         <div className="lg:col-span-5 hero-copy-surface p-5 sm:p-7">
-          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-5">Agentic Workflows · PhysicsLLM</p>
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">AI research assistants for reproducible physics</h1>
-          <p className="text-lg leading-relaxed text-primary-foreground/75 mt-6">We develop language-model agents that help researchers connect data, software, and scientific context—while keeping every step visible and reproducible.</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-accent mb-5">PhysicsLLM · Research data management</p>
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">Making scientific data smarter with AI</h1>
+          <p className="text-lg leading-relaxed text-primary-foreground/75 mt-6">We are building open-source AI tools that help physicists organize, find, share, and reuse research data more efficiently.</p>
           <div className="mt-8 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-widest text-primary-foreground/70">
-            <span className="border border-primary-foreground/20 px-3 py-2">AI agents</span><span className="border border-primary-foreground/20 px-3 py-2">Open science</span><span className="border border-primary-foreground/20 px-3 py-2">Human oversight</span>
+            <span className="border border-primary-foreground/20 px-3 py-2">Physics AI</span><span className="border border-primary-foreground/20 px-3 py-2">Open source</span><span className="border border-primary-foreground/20 px-3 py-2">Smarter data</span>
           </div>
         </div>
         <button onClick={() => setOpen(true)} className="lg:col-span-7 group relative aspect-video overflow-hidden border border-primary-foreground/30 hero-video-placeholder text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="Open PhysicsLLM video placeholder">
@@ -34,7 +34,7 @@ const Hero = () => {
           <AnimatedBackground intensity={1} />
           <Button variant="ghost" size="icon" className="absolute right-3 top-3 z-20 text-primary-foreground hover:bg-primary-foreground/10" onClick={() => setOpen(false)} aria-label="Close overview"><X /></Button>
           <div className="absolute inset-0 flex items-center justify-center p-8 text-center z-10">
-            <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-widest text-accent">PhysicsLLM in one minute</p><h2 className="font-heading text-3xl md:text-5xl font-bold mt-4">Researchers stay in control. AI helps connect the work.</h2><p className="text-primary-foreground/75 leading-relaxed mt-5">Our assistants bring together domain knowledge, tools, data, and provenance so complex workflows become easier to build, inspect, and reproduce.</p></div>
+             <div className="max-w-2xl"><p className="text-xs font-bold uppercase tracking-widest text-accent">PhysicsLLM in one minute</p><h2 className="font-heading text-3xl md:text-5xl font-bold mt-4">Ask questions. Find knowledge. Share data.</h2><p className="text-primary-foreground/75 leading-relaxed mt-5">Large Language Models—the AI technology behind chatbots—can help researchers search publications, databases, software repositories, and laboratory notebooks using natural language.</p></div>
           </div>
         </div>
       </div>}

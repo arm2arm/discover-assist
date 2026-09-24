@@ -10,28 +10,25 @@ const Mission = () => {
           </div>
 
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-foreground">
-            From Big Data to Smart Data
+            AI-powered research data management
           </h2>
 
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-muted-foreground leading-relaxed text-center mb-8">
-              PhysicsLLM empowers researchers across all ErUM communities with autonomous AI
-              agents that accelerate scientific discovery. By combining domain-specific Large
-              Language Models with physics-grounded knowledge bases, our agentic systems automate
-              data curation, metadata annotation, semantic search, and workflow documentation—transforming
-              how ~20,000 scientists manage and publish research data.
+              Physics-LLM brings together physicists, computer scientists, and industry partners
+              to develop a toolkit based on Large Language Models—the same AI technology behind
+              chatbots. Researchers will be able to ask questions in natural language, find
+              relevant information, and organize, store, and share data in reusable formats.
             </p>
 
             <div className="bg-card-gradient rounded-2xl p-8 border border-border shadow-card">
               <div className="flex items-start gap-4">
                 <Sparkles className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                 <p className="text-lg text-card-foreground">
-                  Built on{" "}
-                  <strong className="text-accent">FAIR principles</strong>{" "}
-                  (Findable, Accessible, Interoperable, Reusable) and integrated with{" "}
-                  <strong className="text-accent">REANA</strong> for reproducible workflow
-                  orchestration. Our tools prioritize energy-conscious and computationally
-                  efficient code generation across the entire research lifecycle.
+                  <strong className="text-accent">Open source matters.</strong>{" "}
+                  The project’s tools and fine-tuned AI models will be openly available so
+                  research institutes can adapt them without depending on proprietary commercial
+                  services. This supports transparency, sustainability, and data sovereignty.
                 </p>
               </div>
             </div>

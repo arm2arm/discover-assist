@@ -4,23 +4,23 @@ import { Target, Layers, Package, Activity } from "lucide-react";
 const cards = [
   {
     icon: Target,
-    title: "Objective",
-    text: "Create autonomous research assistants using CrewAI, LangChain, and domain-specific physics LLMs for seamless data publication and curation.",
+    title: "The goal",
+    text: "Make research data easier to organize, find, share, and reuse with AI-powered research data management tools.",
   },
   {
     icon: Layers,
-    title: "Focus Areas",
-    text: "Workflow orchestration · Multi-agent systems · FAIR data pipelines · Metadata extraction · Knowledge synthesis",
+    title: "How it works",
+    text: "Researchers use natural-language questions to find information across publications, databases, software repositories, and laboratory notebooks.",
   },
   {
     icon: Package,
-    title: "Deliverables",
-    text: "Open-source frameworks · RDM toolkit components · Benchmark datasets · Best-practice guides · Deployment templates",
+    title: "What we will build",
+    text: "Open-source physics AI models, intelligent research assistants, code-generation tools, and simpler interfaces for sharing and retrieving data.",
   },
   {
     icon: Activity,
-    title: "Status",
-    text: "Active (2025–2027) · Part of PhysicsLLM · Funded by BMFTR via ErUM-Data-Hub · ~2.8M EUR consortium",
+    title: "Why open source",
+    text: "Open tools support transparency, long-term sustainability, adaptability, and scientific data sovereignty.",
   },
 ];
 
@@ -30,7 +30,7 @@ const TLDRPanel = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">At a Glance</h2>
-          <p className="text-muted-foreground">Quick overview of the Agentic Workflows work package</p>
+          <p className="text-muted-foreground">A quick overview of Physics-LLM and its research data toolkit</p>
         </div>
         <div className="grid sm:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {cards.map((c, i) => (

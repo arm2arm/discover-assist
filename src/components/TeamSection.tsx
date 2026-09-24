@@ -4,7 +4,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const team = [
   { name: "Dr. Arman Khalatyan", initials: "AK", role: "WP Lead · Agentic Systems Architecture", institution: "Leibniz Institute for Astrophysics Potsdam (AIP)", orcid: "https://orcid.org/0000-0002-8913-0690", isPi: true },
-  { name: "Dr. Tom Tong", initials: "TT", role: "Implementation · Multi-GPU Optimization · CrewAI Development", institution: "Leibniz Institute for Astrophysics Potsdam (AIP)", orcid: "https://orcid.org/0000-0000-0000-0001", isPi: false },
+  { name: "Dr. Tom Tong", initials: "TT", role: "Implementation · AI model development", institution: "Leibniz Institute for Astrophysics Potsdam (AIP)", orcid: "https://orcid.org/0000-0000-0000-0001", isPi: false },
 ];
 
 const TeamSection = () => (

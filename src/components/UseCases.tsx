@@ -6,19 +6,19 @@ const cases = [
     icon: BookOpen,
     title: "Autonomous Literature Review",
     description:
-      "Agents that search, summarize, and synthesize physics papers with citation management and metadata extraction across all ErUM communities.",
+      "Search and summarize physics publications, then extract useful information and metadata for searchable databases.",
   },
   {
     icon: Database,
-    title: "FAIR Data Pipeline Orchestration",
+    title: "Natural-Language Data Access",
     description:
-      "Multi-step workflows for processing, curating, and publishing research data with automated metadata generation following FAIR principles.",
+      "Let researchers deposit, classify, find, and retrieve data by asking straightforward questions instead of navigating complex storage systems.",
   },
   {
     icon: Workflow,
-    title: "Research Workflow Automation",
+    title: "Assisted Data Analysis",
     description:
-      "End-to-end agents that coordinate data analysis, visualization, and documentation for reproducible science using REANA.",
+      "Help scientists design multi-step analysis tasks, generate the code needed to carry them out, and optimize that code for efficiency.",
   },
 ];
 
@@ -31,7 +31,7 @@ const UseCases = () => {
             What We're Building
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Concrete applications of agentic AI in fundamental physics research
+            Practical ways AI can make scientific information easier to use and reuse
           </p>
         </div>
 

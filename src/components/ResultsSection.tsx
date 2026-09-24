@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "./SectionHeading";
 
 const results = [
-  { icon: Workflow, label: "Workflow architecture", title: "Agent orchestration patterns", text: "Reusable patterns for assistants that coordinate tools while preserving human oversight." },
+  { icon: Workflow, label: "Research assistants", title: "Multi-step AI support", text: "Open approaches for assistants that can plan tasks, suggest next steps, and support scientific analysis." },
   { icon: Database, label: "Research data", title: "Context-aware discovery", text: "Methods that connect data with metadata, provenance, software, and domain knowledge." },
-  { icon: Code2, label: "Infrastructure", title: "Efficient model serving", text: "Multi-GPU strategies and hosting guidance for dependable institutional LLM services." }
+  { icon: Code2, label: "Open tools", title: "Physics-focused AI models", text: "Fine-tuned open-source models and efficient code-generation tools for physics research." }
 ];
 
 const ResultsSection = () => (
